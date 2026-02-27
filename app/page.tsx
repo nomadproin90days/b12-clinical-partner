@@ -8,46 +8,35 @@ const emails = [
   {
     id: 1,
     tier: "Core",
-    tag: "Cold outreach · Any role",
-    name: "The Problem-First",
-    hook: "Lead with friction they already feel — before you mention your name.",
+    tag: "Direct replacement for the current Apollo email",
+    name: "The Current Fix",
+    hook: "Same four services. Completely different opening. This is what the current email should say.",
     why: [
-      "Opens with a problem the prospect recognizes from their own week. You earn the right to be read before you pitch anything.",
-      "Thuy becomes the answer to a problem they already have — not a vendor asking for time.",
-      "The four services are presented as solutions to three named frictions. Each one earns its place.",
+      "The current email opens with \"I'm Thuy Cao\" — self-focused. This version opens with a question about the prospect's situation. They're reading about themselves, not about Thuy.",
+      "\"Without changing your clinical protocols\" is the most reassuring line in the email. It was buried at the end. It's now in the first five lines where it does its job.",
+      "Medicaid coverage in MD, PA, and DE is added as a closing proof point — removes the cost barrier objection before the prospect raises it.",
     ],
-    solves: "Prospects who scan and delete anything that feels like a pitch.",
+    solves: "A direct swap for the current live Apollo email — same audience, stronger opening, cleaner CTA.",
     body: `Hi {{first_name}},
 
-I'm Thuy Cao, owner of Voshell's Pharmacy — a 503A licensed compounding pharmacy in Maryland.
+Are families at {{company}} going home on injectable B12 with a standardized setup — or is prep consistency and refill coordination still landing on your staff?
 
-I work with hospital social workers and genetics/metabolism teams who support families managing injectable B12 at home.
+I'm Thuy Cao, PharmD, owner of Voshell's Pharmacy in Maryland (503A). We partner with genetics and metabolism teams to handle the pharmacy side of home B12 — without changing your clinical protocols.
 
-Here's the problem I keep hearing about:
+What that looks like in practice:
 
-Families leave the clinic with a vial, a needle, and no real plan. Caregivers make prep errors. Your coordinators field the callbacks. Refills fall through the gap between your team and the pharmacy.
+• Single-dose vials and pre-loaded syringes — nothing for the caregiver to measure or draw
+• Written administration guides in English and Spanish — clear enough for any family member
+• Caregivers call us, not your office
+• One contact for your team on refills, Rx changes, and coordination
 
-We fix all three.
+We're Medicaid-approved in Maryland, Pennsylvania, and Delaware. Most families we serve pay nothing out of pocket.
 
-For your appropriate B12 patients, Voshell's provides:
-
-• Single-dose vials — safer for home administration, no multi-dose risk
-• Pre-loaded syringes — when clinically appropriate, ready to inject, no measuring
-• Multilingual caregiver instructions — English and Spanish, written for families not clinicians
-• Direct coordination with your team — one contact for refills, Rx changes, and caregiver questions. They call us, not you.
-
-None of this changes your existing clinical protocols.
-
-Two ways to connect:
-1. A 20-minute call to walk through how this works for your patients
-2. I can send a one-page overview you can review on your own time
-
-Just reply and let me know which works better.
+I can send a one-page overview or set up a 20-minute call — which works better?
 
 Best,
 Thuy Cao, PharmD
-Owner, Voshell's Pharmacy
-503A Compounding · Maryland
+Owner, Voshell's Pharmacy · 503A · Maryland
 thuy@voshellspharmacy.com`,
   },
   {
@@ -168,31 +157,34 @@ thuy@voshellspharmacy.com`,
   {
     id: 6,
     tier: "Strategic",
-    tag: "Delaware · PA · MD · Medicaid patients",
-    name: "The Coverage Unlock",
-    hook: "Medicaid approval removes the #1 reason families fall through the gap.",
+    tag: "Thuy's specific ask · All contacts in MD, PA, DE",
+    name: "The Delaware Story",
+    hook: "Thuy asked for this email by name. Delaware Medicaid just approved — use it as the opening line.",
     why: [
-      "Medicaid acceptance is news — it gives a specific, time-relevant reason to reach out that isn't a cold pitch. It's an announcement of access.",
-      "Names the exact patient barrier (cost of compounded medications) that the approval removes. The prospect immediately thinks of specific patients this affects.",
-      "Delaware approval is brand new as of early 2026. Clinics that couldn't partner before due to coverage gaps now have a clear path. This email captures that moment.",
+      "\"We just received Medicaid approval in Delaware\" is news. It gives a time-stamped, specific reason to reach out that isn't a cold pitch. Prospects who ignored the last email will open this one.",
+      "The expansion narrative — MD, PA (Jan 2026), DE, DC pending — tells a momentum story. Voshell's isn't a small local pharmacy. It's building a Mid-Atlantic network. That changes how a prospect sees the relationship.",
+      "\"Cost is the most common reason families fall through the gap\" names the barrier the prospect already knows about without making it feel like a sales pitch. It's a shared diagnosis, not a feature claim.",
     ],
-    solves: "Clinics in Delaware that couldn't refer before due to Medicaid coverage gaps — and any previously cold contact in PA or MD who cited insurance as a barrier.",
+    solves: "Any genetics/metabolism clinic in MD, PA, or DE — especially new contacts in Delaware where Medicaid access just opened. Also strong as a re-engagement email for any previously cold contact.",
     body: `Hi {{first_name}},
 
-Quick update that may be relevant to your patients at {{company}}:
+We just received Medicaid approval in Delaware.
 
-Voshell's Pharmacy is now Medicaid-approved in Delaware — adding to our existing coverage in Maryland and Pennsylvania. Washington DC is in process.
+That's now three states: Maryland, Pennsylvania (approved January 2026), and Delaware. We're waiting to hear back from Washington DC.
 
-For genetics and metabolism practices, this matters because it removes the most common barrier we hear: families who need home B12 therapy but can't absorb the out-of-pocket cost of compounded medications.
+I'm sharing this because it directly affects families at {{company}}: patients who need home B12 support can now access our program at no out-of-pocket cost across the Mid-Atlantic.
 
-We're a 503A compounding pharmacy providing:
-• Pre-loaded syringes and single-dose B12 vials
-• Multilingual caregiver instructions
-• Direct coordination with your team on refills and Rx changes
+Cost is the most common reason families fall through the gap on home B12 — not clinical complexity. With Medicaid accepted across MD, PA, and DE, that barrier is removed for most of your patients right now.
 
-If you have Medicaid patients managing B12 at home without a reliable pharmacy partner, this may be the right time to connect.
+I'm Thuy Cao, PharmD — owner of Voshell's Pharmacy, a 503A compounding pharmacy in Maryland. We work with genetics and metabolism teams on the home administration side:
 
-Happy to do a 20-minute call, or I can send a one-page overview of how the program works.
+• Pre-loaded syringes and single-dose vials — no measuring, no prep errors
+• Multilingual caregiver instructions — English, Spanish, Korean, Vietnamese
+• One direct coordination contact — refills and Rx changes go through us, not your team
+
+Nothing changes in your clinical workflow. We fit into what you already do.
+
+If you have Medicaid patients managing home B12 without a dedicated pharmacy partner, this is a good time to connect. Happy to do a 20-minute call or send a one-page overview — which works better?
 
 Best,
 Thuy Cao, PharmD
@@ -410,8 +402,96 @@ export default function Page() {
           <strong style={{ color: "var(--ink)", fontWeight: 500 }}>Strategic templates</strong> are built around Thuy&apos;s specific
           advantages — Medicaid approval in MD, PA, and DE; pediatric genetics expertise;
           Korean and Vietnamese language capability; and the clinical credibility of a 503A
-          specialist. Use these where the generic outreach won&apos;t land.
+          specialist.
         </p>
+      </div>
+
+      {/* ── Live Email Audit ── */}
+      <div className="px-6 md:px-10 pb-8 max-w-5xl mx-auto">
+        <div
+          className="border"
+          style={{ borderColor: "rgba(14,26,20,0.1)" }}
+        >
+          {/* Audit header */}
+          <div
+            className="px-6 py-4 flex items-center justify-between border-b"
+            style={{ borderColor: "rgba(14,26,20,0.1)", backgroundColor: "rgba(14,26,20,0.03)" }}
+          >
+            <div>
+              <p className="text-xs tracking-[0.14em] uppercase font-medium" style={{ color: "rgba(14,26,20,0.4)" }}>
+                Current Apollo email — what to fix
+              </p>
+              <p className="text-xs font-light mt-0.5" style={{ color: "rgba(14,26,20,0.3)" }}>
+                Subject: B12 Therapy Support for Patients and Families
+              </p>
+            </div>
+            <span
+              className="text-xs tracking-[0.12em] uppercase font-medium px-2.5 py-1"
+              style={{ backgroundColor: "rgba(184,151,90,0.12)", color: "var(--gold)" }}
+            >
+              Live in Apollo
+            </span>
+          </div>
+
+          {/* Problems */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ backgroundColor: "rgba(14,26,20,0.08)" }}>
+            {[
+              {
+                line: `Subject: "B12 Therapy Support for Patients and Families"`,
+                fix: "Describes what you offer. Nobody opens an email because of the sender's service. Rewrite around the prospect's problem or the Medicaid news.",
+              },
+              {
+                line: `"I'm Thuy Cao, owner of Voshell's Pharmacy..."`,
+                fix: "Opens on Thuy. The prospect doesn't care who she is until they care about the problem she solves. Lead with their situation, not your intro.",
+              },
+              {
+                line: `"would love to explore how this approach could optionally support appropriate patients"`,
+                fix: "\"Would love,\" \"optionally,\" \"appropriate\" — three hedges in one sentence. Signals uncertainty. Cut all three.",
+              },
+              {
+                line: `"without changing your existing clinical protocols"`,
+                fix: "The most reassuring line in the email — buried second-to-last. Move it to the first five lines where it earns trust before resistance builds.",
+              },
+              {
+                line: `"If helpful, I'd be glad to share"`,
+                fix: "Gives the prospect an easy out before the CTA. Replace with a binary choice: \"call or overview — which works better?\"",
+              },
+              {
+                line: "No mention of Delaware Medicaid",
+                fix: "Delaware just approved. MD, PA already live. DC pending. This is the most powerful hook in the outreach and it's not in the email at all. See Template 6 →",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="p-5 flex flex-col gap-2"
+                style={{ backgroundColor: "var(--cream)" }}
+              >
+                <p
+                  className="text-xs font-medium leading-snug font-mono"
+                  style={{ color: "rgba(14,26,20,0.5)" }}
+                >
+                  ✕ {item.line}
+                </p>
+                <p
+                  className="text-xs font-light leading-relaxed"
+                  style={{ color: "rgba(14,26,20,0.6)" }}
+                >
+                  {item.fix}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA to scroll to fix */}
+          <div
+            className="px-6 py-3 flex items-center gap-4 border-t"
+            style={{ borderColor: "rgba(14,26,20,0.08)", backgroundColor: "rgba(14,26,20,0.02)" }}
+          >
+            <p className="text-xs font-light" style={{ color: "rgba(14,26,20,0.4)" }}>
+              Template 1 below is the direct replacement. Template 6 is the Delaware Medicaid story.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* ── Tier filter ── */}
