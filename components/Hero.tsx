@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
+import { fadeUp, stagger } from "@/lib/motion";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,11 +20,7 @@ export default function Hero() {
       style={{ backgroundColor: "var(--ink)" }}
     >
       {/* Background grid */}
-      <motion.div
-        className="absolute inset-0"
-        style={{ y, opacity: 0.06 }}
-        aria-hidden
-      >
+      <motion.div className="absolute inset-0" style={{ y, opacity: 0.06 }} aria-hidden>
         <svg width="100%" height="100%">
           <defs>
             <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -35,7 +31,7 @@ export default function Hero() {
         </svg>
       </motion.div>
 
-      {/* Accent circle */}
+      {/* Accent glow */}
       <motion.div
         className="absolute top-1/4 right-0 w-96 h-96 rounded-full"
         style={{
@@ -56,20 +52,19 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Eyebrow */}
-        <motion.div
-          className="flex items-center gap-3 mb-10"
-          variants={fadeUp}
-        >
-          <div
-            className="w-8 h-px"
-            style={{ backgroundColor: "var(--gold)" }}
-          />
+        {/* Credential badge */}
+        <motion.div className="flex flex-wrap items-center gap-4 mb-10" variants={fadeUp}>
           <span
-            className="text-xs tracking-[0.2em] uppercase font-medium"
-            style={{ color: "var(--gold)" }}
+            className="text-xs tracking-[0.18em] uppercase font-medium px-3 py-1.5 border"
+            style={{ color: "var(--gold)", borderColor: "rgba(184,151,90,0.35)" }}
           >
-            B12 Clinical Partnership Program
+            503A Licensed Compounding Pharmacy
+          </span>
+          <span
+            className="text-xs tracking-[0.18em] uppercase font-medium"
+            style={{ color: "rgba(244,239,230,0.3)" }}
+          >
+            Maryland · Mid-Atlantic
           </span>
         </motion.div>
 
@@ -79,30 +74,32 @@ export default function Hero() {
           style={{ color: "var(--cream)" }}
           variants={stagger}
         >
-          <motion.span className="block" variants={fadeUp}>
-            Your B12
-          </motion.span>
-          <motion.span
-            className="block serif-italic"
-            style={{ color: "var(--gold)" }}
-            variants={fadeUp}
-          >
+          <motion.span className="block" variants={fadeUp}>Your B12</motion.span>
+          <motion.span className="block serif-italic" style={{ color: "var(--gold)" }} variants={fadeUp}>
             home program.
           </motion.span>
-          <motion.span className="block" variants={fadeUp}>
-            Standardized.
-          </motion.span>
+          <motion.span className="block" variants={fadeUp}>Standardized.</motion.span>
         </motion.h1>
 
-        {/* Sub */}
+        {/* Sub — mirrors Thuy's email voice */}
         <motion.p
-          className="text-lg md:text-xl font-light max-w-xl leading-relaxed mb-14"
+          className="text-lg md:text-xl font-light max-w-xl leading-relaxed mb-6"
           style={{ color: "rgba(244,239,230,0.55)" }}
           variants={fadeUp}
         >
-          Voshell&apos;s Pharmacy eliminates caregiver prep errors, coordination
-          back-and-forth, and refill confusion — so your team focuses on
-          patients, not logistics.
+          This is the overview Thuy mentioned. Voshell&apos;s Pharmacy supports
+          genetics and metabolism teams by standardizing the home B12 experience —
+          without changing your existing clinical protocols.
+        </motion.p>
+
+        {/* Trust line */}
+        <motion.p
+          className="text-sm font-light mb-12 flex items-center gap-2"
+          style={{ color: "rgba(184,151,90,0.7)" }}
+          variants={fadeUp}
+        >
+          <span style={{ color: "var(--gold)" }}>—</span>
+          Already supporting families across Maryland, Pennsylvania, and Delaware
         </motion.p>
 
         {/* CTAs */}
@@ -110,18 +107,11 @@ export default function Hero() {
           <a
             href="#contact"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 text-sm tracking-[0.1em] uppercase font-medium transition-all duration-300 group"
-            style={{
-              backgroundColor: "var(--gold)",
-              color: "var(--ink)",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#c8a86a";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "var(--gold)";
-            }}
+            style={{ backgroundColor: "var(--gold)", color: "var(--ink)" }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#c8a86a"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "var(--gold)"; }}
           >
-            Book a 10-minute intro
+            Book the 20-minute call
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden>
               <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -129,10 +119,7 @@ export default function Hero() {
           <a
             href="#how-it-works"
             className="inline-flex items-center justify-center px-8 py-4 text-sm tracking-[0.1em] uppercase font-medium border transition-all duration-300"
-            style={{
-              borderColor: "rgba(244,239,230,0.25)",
-              color: "rgba(244,239,230,0.7)",
-            }}
+            style={{ borderColor: "rgba(244,239,230,0.25)", color: "rgba(244,239,230,0.7)" }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(244,239,230,0.6)";
               (e.currentTarget as HTMLAnchorElement).style.color = "var(--cream)";

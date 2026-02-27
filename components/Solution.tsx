@@ -3,24 +3,31 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger, scaleIn, viewportOnce } from "@/lib/motion";
 
+// These 4 map 1:1 to the services Thuy names in her outbound email
 const pillars = [
   {
-    label: "Format",
-    title: "Pre-loaded, single-dose syringes",
-    detail: "No measuring. No drawing. No variability. Each syringe is prepared under USP 797 standards, labeled clearly, and ready for home use.",
+    label: "Format A",
+    title: "Single-dose B12 vials",
+    detail: "Safer for caregivers who are new to injectable administration. Each vial is pre-labeled, single-use, and eliminates multi-dose cross-contamination risk.",
     icon: "◈",
   },
   {
-    label: "Instructions",
-    title: "Bilingual caregiver guides",
-    detail: "English and Spanish administration instructions — clear enough for a family member with no medical training to follow without a call to your office.",
+    label: "Format B",
+    title: "Pre-loaded syringes",
+    detail: "When clinically appropriate, we supply ready-to-inject syringes — no drawing, no measuring. Maximum consistency across every administration.",
     icon: "◉",
   },
   {
-    label: "Coordination",
-    title: "One direct line. No runaround.",
-    detail: "Designate a single contact at your clinic. We handle refill coordination, Rx verification, and caregiver questions end-to-end.",
+    label: "Education",
+    title: "Multilingual caregiver education",
+    detail: "Written administration guides in English and Spanish — clear enough for a family member with no medical training to follow without calling your office.",
     icon: "◎",
+  },
+  {
+    label: "Coordination",
+    title: "Direct line to social work and clinic staff",
+    detail: "We coordinate directly with your team on refills, Rx changes, and caregiver questions. One contact. No ticket system. No hold music back to the pharmacy.",
+    icon: "◐",
   },
 ];
 
@@ -30,7 +37,7 @@ export default function Solution() {
       style={{ backgroundColor: "var(--mist)" }}
       className="relative py-28 md:py-40 overflow-hidden"
     >
-      {/* Background text */}
+      {/* Watermark */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none"
         aria-hidden
@@ -46,7 +53,7 @@ export default function Solution() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
         {/* Label */}
         <motion.div
-          className="flex items-center gap-3 mb-16"
+          className="flex items-center gap-3 mb-6"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -54,13 +61,12 @@ export default function Solution() {
         >
           <div className="w-8 h-px" style={{ backgroundColor: "var(--sage)", opacity: 0.5 }} />
           <span className="text-xs tracking-[0.2em] uppercase font-medium" style={{ color: "var(--sage)" }}>
-            The Voshell&apos;s solution
+            What Voshell&apos;s provides
           </span>
         </motion.div>
 
-        {/* Two-col layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          {/* Left: headline */}
+        {/* Headline */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start mb-16">
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -76,26 +82,36 @@ export default function Solution() {
               <span className="serif-italic" style={{ color: "var(--gold)" }}>Not just a fill.</span>
             </motion.h2>
             <motion.p
-              className="text-base md:text-lg font-light leading-relaxed max-w-md"
+              className="text-base md:text-lg font-light leading-relaxed max-w-md mb-6"
               style={{ color: "rgba(14,26,20,0.6)" }}
               variants={fadeUp}
             >
-              Most pharmacies ship a vial and wait for the next prescription. We
-              build the infrastructure your patients and coordinators rely on —
-              before, during, and after every refill cycle.
+              These are the four things Thuy referenced in her email — in detail.
+              Each one is designed to remove a burden from your team, not add one.
+            </motion.p>
+            <motion.p
+              className="text-sm font-medium px-4 py-3 border-l-2 max-w-md"
+              style={{
+                color: "var(--sage)",
+                borderColor: "var(--sage)",
+                backgroundColor: "rgba(61,90,74,0.06)",
+              }}
+              variants={fadeUp}
+            >
+              None of this requires changing your existing clinical protocols.
             </motion.p>
 
-            {/* Stat row */}
+            {/* Quick stats */}
             <motion.div
               className="grid grid-cols-2 gap-6 mt-14 pt-14 border-t"
               style={{ borderColor: "rgba(14,26,20,0.1)" }}
               variants={stagger}
             >
               {[
-                { n: "USP 797", label: "Compounding standard" },
-                { n: "~20 min", label: "Clinic onboarding time" },
-                { n: "PA / DE", label: "Regional service area" },
-                { n: "1 line", label: "Refill coordination pathway" },
+                { n: "503A", label: "Licensed compounding" },
+                { n: "~20 min", label: "Clinic onboarding" },
+                { n: "MD · PA · DE", label: "Service region" },
+                { n: "1 contact", label: "Coordination pathway" },
               ].map((s) => (
                 <motion.div key={s.label} variants={fadeUp}>
                   <p className="serif text-3xl md:text-4xl" style={{ color: "var(--ink)" }}>{s.n}</p>
@@ -105,7 +121,7 @@ export default function Solution() {
             </motion.div>
           </motion.div>
 
-          {/* Right: pillars */}
+          {/* Pillar cards */}
           <motion.div
             className="flex flex-col gap-px"
             style={{ backgroundColor: "rgba(14,26,20,0.08)" }}
